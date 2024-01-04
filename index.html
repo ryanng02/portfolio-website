@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>
+        Personal Portfolio Website
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5aa0fe55c8.js" crossorigin="anonymous"></script>
+    <!--this is fontawesome.com so we can use some icons under the services section-->
+</head>
+<body>
+<div id = "header">  <!--HEADER section-->
+    <div class="container">
+        <nav> <!-- its the headers buttons -->
+            <img src = "images/logo1.jpeg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>  <!-- ul paired with li is an unordered lists-->
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Extracuriculum</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>  
+        <div class="header-text">
+        <p>Computer Science and Technology</p>
+        <h1>Hi, I'm <span>Ryan</span><br>Ng from Malaysia</h1>  
+        <!-- <br> is just a line break to the next line, 
+            the span is just to add color later to the Ryan-->
+        </div>
+    </div>
+</div>
+<div id="about">  <!--ABOUT ME section-->
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">  <!--picture for about me-->
+                <img src="images/nicephoto1.jpeg">
+            </div>
+            <div class="about-col-2">  <!--header text for about me-->
+                <h1 class="sub-title">About Me</h1>
+                <p> I am an international student from Malaysia pursueing a degree in Computer Science and Engineering Technology over
+                    at the University of Toledo. I am trying to find an internship this coming summer 24 and fall 24 as I am eager to apply
+                    my diverse skill set, ranging from analytical problem-solving to effective communication in order to contribute
+                    in the company's success. I am enthusiastic about embracing new challenges and actively seeking opportunities for 
+                    growth, aiming to learn continuously and enhance my skills for long-term professional development.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <!--onclick opentab is to set up the javascript to open the tab later-->
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills"> <!--skills tab under about me-->
+                    <ul>
+                        <li><span>Programming languages</span><br>Java, Python, C, in-line Assembly Language,
+                        HTML, CSS, JavaScript</li>
+                        <li><span>PLCs</span><br>Allen Bradley, Siemens</li>
+                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience"> <!--experience tab under about me-->
+                    <ul>
+                        <li><span>Undergraduate Research Assistant</span><br>Research assistant position in the field of computational
+                        biology and bioinformatics. Worked on projects in relation to algorithm developent and coding using R.</li>
+                        <li><span>True Burger Student Manager</span><br>Managed and coordinated staff workloads while overseeing 
+                        all aspects of the store</li>
+                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education"> <!--education tab under about me-->
+                    <ul>
+                        <li><span>Fall 2020 - Fall 2021</span><br>Methodist College of Kuala Lumpur (CGPA - 3.34)</li>
+                        <li><span>Spring 2022 - Present</span><br>The University of Toledo (CGPA - 3.96)</li>
+                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--SERVICES SECTION-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Extracuricular Activities</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-bullseye"></i> <!--icon to display from fontawesome.com-->
+                <h2>Archery</h2> <!--first project-->
+                <p>Competed professionally in the sport of archery in Malaysia. Highest achievement obtained was state champion.</p>
+                <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
+            </div>
+            <div>
+                <i class="fa-solid fa-hashtag"></i>
+                <h2>CF publicity role</h2> <!--second project-->
+                <p>Held the position of publicity in my Christian Fellowship club. Promoted events and activities to create 
+                    awareness and attract members via social media and promotional materials.</p>
+                <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Web design3</h2> <!--third project-->
+                <p>very cool third project! might be some kind of game or smtg yesyesyes</p>
+                <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--PORTFOLIO SECTION-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3> <!--its the title and description of the pictures-->
+                    <p>very cool description of whatever is in h3 no cap</p>
+                    <a href="https://www.youtube.com/"><i class="fa-solid fa-up-right-from-square"></i></a> <!--this is for the 'link' icon-->
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Social Media App2</h3> 
+                    <p>very very cool description of whatever is in h3 no cap</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> 
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Social Media App3</h3> 
+                    <p>very very very cool description of whatever is in h3 no cap</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> 
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a> <!--this is a button for portfolio section later-->
+    </div>
+</div>
+<!--CONTACT SECTION-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ryanngwj@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>4193205579</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ryan.ng.9210"><i class="fa-brands fa-facebook"></i></a> <!--rmb to put link in-->
+                    <!--<a href=""><i class="fa-brands fa-square-twitter"></i></a>-->
+                    <a href="https://www.instagram.com/ryann_ng/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ryan-wern-jian-ng-4207731a0"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Resume (Ryan Wern Jian Ng) (3) (1).pdf" download class="btn btn2">Download resume</a> <!--the btn takes the css from prev btn but can still customize with btn2-->
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>  
+    </div>
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){ //this will remove active class links(which is basically the underline under the tabs)
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){ //so basically it is removing the tab entirely when you link it as well as the underline
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link"); //this will add back the underline of which one you click
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!--this is for the mobile version for menu side-->
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script> //this is for google sheets access for the contact info thing
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby7C6unC9J6LFMFXyfqehrmdVmZ5-g1Ro4WwcJtHMBpUTUW1fH5ubYcD9TmHEvQsx8VKg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg= document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000) //this is to remove msg after 5 seconds
+            form.reset()//this is to reset contents within the form
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

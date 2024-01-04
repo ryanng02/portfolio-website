@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;  /*this is to make it look cool white going to the selected section*/
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    /* hashtag is for id*/
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{ 
+    /* dots are for class*/
+    padding: 10px 10%; /* the 10 percent is for spacing on left and right*/
+}
+
+/*HEADER SECTION*/
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between; /*this is so that the nav items go to the right leaving space in
+    between the logo and nav */
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block; /* this is to make it side by side instead of up down*/
+    list-style: none;
+    margin: 10px 20px;  /*10 pixels from up down and 20 from left right spacing wise*/
+}
+
+nav ul li a{
+    /*same thing but add a to add white color to font*/
+    color: #fff;
+    text-decoration:none; /* this is to remove the underline under the nav text*/
+    font-size: 18px;
+    position: relative; /* goes with position in nav ul li a for this to work*/
+}
+
+nav ul li a::after{ /*this is to add underline effect on the headers which is gonna pair with hover*/
+    content: '';
+    width:0; /*defining the line thickness*/
+    height:3px;
+    background:#ff004f;
+    position: absolute;
+    left:0;
+    bottom: -6px; /*defining position of red line*/
+    transition: 0.5s; /*delay underline pop up by 0.5seconds*/
+}
+
+nav ul li a:hover::after{ /*when hovering the underline define at the top will work*/
+    width:100%;
+}
+
+.header-text{
+    margin-top:20%; /*spacing above the header*/
+    font-size: 30px;
+}
+
+.header-text h1{
+    /*this is for the smaller para within this header*/
+    font-size:60px;
+    margin-top:20px;
+}
+
+.header-text h1 span{
+    /*for color of Ryan*/
+    color: #ff004f;
+}
+
+/*ABOUT ME SECTION*/
+#about{
+    padding:80px 0px; /*80 for top down, 0 left right*/
+    color: #ababab;
+}
+
+.row{
+    display:flex; /*so that picture and whole about me is side by side*/
+    justify-content: space-between; /*pushes to the right more*/
+    flex-wrap:wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%; /*width of column is 35 percent*/
+}
+
+.about-col-1 img{
+    width:100%;
+    border-radius:15px; /*so that the corner of image will be round*/
+}
+
+.about-col-2{
+    flex-basis: 60%; 
+    /*because this is 60 and other is 35, we will get 5% space in between pic and text*/
+}
+
+.sub-title{
+    font-size:60px;
+    font-weight:600;
+    color:#fff;
+}
+
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+    /*20 from top, 0 from left right, 40 bottom*/
+}
+
+.tab-links{
+    margin-right:50px;
+    font-size:18px;
+    font-weight:500;
+    cursor:pointer; /*makes cursor a pointer finger when hover over the tab links*/
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.5s;
+}
+
+.tab-links.active-link::after{ /*tab link that is active has underline at bottom*/
+    width:50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{ /*hide all tab contents under about me*/
+    display:none;
+}
+
+.tab-contents.active-tab{/*allow the active tab to be visible*/
+    display:block;
+}
+
+/*SERVICES SECTION*/
+#services{
+    padding:30px 0;
+}
+
+.services-list{ /*making 3 grids for the services*/
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+
+.services-list div{ /*this is also to make boxes for each service*/
+    background:#262626;
+    padding:40px;
+    font-size: 13px;
+    font-weight:300;
+    border-radius:10px;/*so that border will be round*/
+    transition:background 0.5s,transform 0.5s;
+}
+
+.services-list div i{ /*for icons in services*/
+    font-size:50px;
+    margin-bottom:30px;
+}
+
+.services-list div h2{ /*this is for each service title*/
+    font-size:30px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.services-list div a{/*for the learn more link*/
+    text-decoration:none;
+    color:#fff;
+    font-size:12px;
+    margin-top:20px;
+    display:inline-block;
+}
+
+.services-list div:hover{/*whenever you hover, it will change background color*/
+    background:#ff004f;
+    transform:translateY(-10px); /*this will move the whole box by a little upwards when hovering*/
+}
+
+/*PORTFOLIO SECTION*/
+#portfolio{
+    padding:50px 0;
+}
+
+.work-list{ /*creating the grid for the 3 images/ works so that it is horizontal from one another*/
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+
+.work{ /*for the pictures under my work*/
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+}
+
+.work img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    transition:transform 0.5s; /*this is to make it slowly zoom in in 0.5 seconds*/
+}
+
+.layer{ /*layer is basically the text over the image*/
+    width:100%;
+    height:0;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f); /*the 0.6 is 60 percent opacity*/
+    border-radius:10px; /*the above also give like a shadow layer effect with half opacity*/
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 40px;
+    text-align:center;
+    font-size:14px; 
+    transition:height 0.5s; /*for the hover effect for text appearing*/
+}
+
+.layer h3{
+    font-weight:500;
+    margin-bottom: 20px;
+}
+
+.layer a{ /*for the link thing*/
+    margin-top:20px ;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height:60px;
+    background:#fff;
+    width:60px;
+    height:60px;
+    border-radius:50%; /*so that it will be a circle*/
+    text-align:center;
+}
+
+.work:hover img{
+    transform: scale(1.1);/* this is to make image bigger when hovering over it*/
+}
+
+.work:hover .layer{
+    height:100%;
+}
+
+.btn{ /*making the button go to the center and have a nice rectangle around it*/
+    display:block;
+    margin:50px auto;
+    width:fit-content;
+    border:1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius:6px;
+    text-decoration:none;/*make underline go away*/
+    color:#fff;
+    transition:background 0.5s;
+}
+
+.btn:hover{
+    background:#ff004f;
+}
+
+/*CONTACT SECTION*/
+.contact-left{
+    flex-basis:35%;
+}
+
+.contact-right{
+    flex-basis:60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{ /*for the icon*/
+    color:#ff004f;
+    margin-right: 15px;
+    font-size:25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display:inline-block;
+    transition:transform 0.5s;
+}
+
+.social-icons a:hover{
+    color:#ff004f;
+    transform:translateY(-5px);
+}
+
+.btn.btn2{
+    display:inline-block; /*pulls it back to left to be inline with the thing*/
+    background:#ff004f; 
+}
+
+.contact-right form{
+    width:100%;
+}
+
+form input, form textarea{ /*so this applies to both input and textarea*/
+    width:100%;
+    border:0;
+    outline:none;
+    background:#262626;
+    padding:15px;
+    margin:15px 0;
+    color:#fff;
+    font-size:18px;
+    border-radius:6px;
+}
+
+form .btn2{
+    padding:14px 60px;
+    font-size:18px;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+/*CSS for small screens*/
+
+nav .fas{
+    display:none;/*this is to hide the cross and menu icons when in smaller screen*/
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image:url(images/phone-background1.jpeg);
+    }
+    .header-text{
+        margin-top:100%;
+        font-size:16px;
+    }
+    .header-text h1{
+        font-size:30px;
+    }
+    nav .fas{
+        display:block;
+        font-size:25px;
+    }
+    nav ul{
+        background:#ff004f;
+        position:fixed;
+        top:0;
+        right:-200px; /*this is to hide the menu box initially as the width is also 200px*/
+        width:200px;
+        height:100vh;
+        padding-top: 50px;
+        z-index:2;
+        transition:right 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin:25px;
+    }
+    nav ul .fas{
+        position:absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+    }
+    .sub-title{
+        font-size:40px;
+    }
+    .about-col-1,.about-col-2{
+        flex-basis:100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right:20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis:100%;
+    }
+}
+
+#msg{
+    color:#61b752;
+    margin-top: -40px;
+    display:block;
+}

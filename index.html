@@ -28,7 +28,7 @@
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>  
         <div class="header-text">
-        <p>Computer Science and Technology</p>
+        <p>Computer Science and Engineering Technology</p>
         <h1>Hi, I'm <span>Ryan</span><br>Ng from Malaysia</h1>  
         <!-- <br> is just a line break to the next line, 
             the span is just to add color later to the Ryan-->
@@ -44,7 +44,7 @@
             <div class="about-col-2">  <!--header text for about me-->
                 <h1 class="sub-title">About Me</h1>
                 <p> I am an international student from Malaysia pursueing a degree in Computer Science and Engineering Technology over
-                    at the University of Toledo. I am trying to find an internship this coming summer 24 and fall 24 as I am eager to apply
+                    at the University of Toledo. I am trying to find a full-time position as a software engineer as I am eager to apply
                     my diverse skill set, ranging from analytical problem-solving to effective communication in order to contribute
                     in the company's success. I am enthusiastic about embracing new challenges and actively seeking opportunities for 
                     growth, aiming to learn continuously and enhance my skills for long-term professional development.
@@ -54,10 +54,11 @@
                     <!--onclick opentab is to set up the javascript to open the tab later-->
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills"> <!--skills tab under about me-->
                     <ul>
-                        <li><span>Programming languages</span><br>Java, Python, C, in-line Assembly Language,
+                        <li><span>Programming languages</span><br>Java, Python, C#, in-line Assembly Language,
                         HTML, CSS, JavaScript</li>
                         <li><span>PLCs</span><br>Allen Bradley, Siemens</li>
                         <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
@@ -66,7 +67,8 @@
                 <div class="tab-contents" id="experience"> <!--experience tab under about me-->
                     <ul>
                         <li><span>Undergraduate Research Assistant</span><br>Research assistant position in the field of computational
-                        biology and bioinformatics. Worked on projects in relation to algorithm developent and coding using R.</li>
+                        biology and bioinformatics. Worked on projects in relation to algorithm developent and coding using R. I also created graphs and spreadsheets using real cancer patient data to determine the significance of certain
+                        proteins in the body in relation to liver cancer</li>
                         <li><span>True Burger Student Manager</span><br>Managed and coordinated staff workloads while overseeing 
                         all aspects of the store</li>
                         <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
@@ -76,6 +78,26 @@
                     <ul>
                         <li><span>Fall 2020 - Fall 2021</span><br>Methodist College of Kuala Lumpur (CGPA - 3.34)</li>
                         <li><span>Spring 2022 - Present</span><br>The University of Toledo (CGPA - 3.96)</li>
+                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certifications"> <!--certifications tab under about me-->
+                    <ul>
+                        <li><span>IBM DevOps and Software Engineering Specialization</span><br>includes
+                            <br>- Continuous Integration and Continuous Delivery (CI/CD)
+                            <br>- Application Development using Microservices and Serverless
+                            <br>- Developing AI Applications with Python and Flask
+                            <br>- Getting Started with Git and GitHub
+                            <br>- Hands-on Introduction to Linux Commands and Shell Scripting
+                            <br>- Monitoring and Observability for Development and DevOps
+                            <br>- Introduction to Containers w/ Docker, Kubernetes & OpenShift
+                            <br>- DevOps Capstone Project
+                            <br>- Introduction to DevOps
+                            <br>- Python for Data Science, AI & Development
+                            <br>- Introduction to Cloud Computing
+                            <br>- Introduction to Agile Development and Scrum
+                            <br>- Introduction to Test and Behavior Driven Development
+                            <br>- Application Security for Developers and DevOps Professionals</li>
                         <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
                     </ul>
                 </div>
@@ -101,12 +123,12 @@
                     awareness and attract members via social media and promotional materials.</p>
                 <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
             </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>Web design3</h2> <!--third project-->
-                <p>very cool third project! might be some kind of game or smtg yesyesyes</p>
+            <!--<div>-->
+                <!--<i class="fa-brands fa-app-store"></i>-->
+                <!--<h2>Web design3</h2>--> <!--third project-->
+                <!--<p>very cool third project! might be some kind of game or smtg yesyesyes</p>-->
                 <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
-            </div>
+            <!--</div>-->
         </div>
     </div>
 </div>
@@ -127,11 +149,14 @@
                 </div>
             </div>
             <div class="work">
-                <img src="images/work02.jpeg">
+                <img src="images/image00.png">
                 <div class="layer">
-                    <h3>Social Media App2</h3> 
-                    <p>very very cool description of whatever is in h3 no cap</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> 
+                    <h3>Student Grading Application</h3> 
+                    <p>
+                        this is a grading application which features adding students, 
+                        adding the assignment and grades associated with a specific student as well as displaying and deleting assignments
+                    </p>
+                    <a href="https://github.com/ryanng02/studentGradingApp"><i class="fa-solid fa-up-right-from-square"></i></a> 
                 </div>
             </div>
             <div class="work">
@@ -143,7 +168,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a> <!--this is a button for portfolio section later-->
+        <!--<a href="#" class="btn">See more</a>-->
     </div>
 </div>
 <!--CONTACT SECTION-->
@@ -158,7 +183,7 @@
                     <a href="https://www.facebook.com/ryan.ng.9210"><i class="fa-brands fa-facebook"></i></a> <!--rmb to put link in-->
                     <!--<a href=""><i class="fa-brands fa-square-twitter"></i></a>-->
                     <a href="https://www.instagram.com/ryann_ng/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/ryan-wern-jian-ng-4207731a0"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/ryan-wern-jian-ng-4207731a0/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="images/Resume (Ryan Wern Jian Ng) (3) (1).pdf" download class="btn btn2">Download resume</a> <!--the btn takes the css from prev btn but can still customize with btn2-->
             </div>

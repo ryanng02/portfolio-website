@@ -59,7 +59,7 @@
                 <div class="tab-contents active-tab" id="skills"> <!--skills tab under about me-->
                     <ul>
                         <li><span>Programming languages</span><br>Java, Python, C#, in-line Assembly Language,
-                        HTML, CSS, JavaScript, IT</li>
+                        HTML, CSS, JavaScript</li>
                         <li><span>PLCs</span><br>Allen Bradley, Siemens</li>
                         <li><span>others</span><br>React, Node.js</li>
                     </ul>
@@ -239,8 +239,8 @@
     const msg= document.getElementById("msg")
   
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      e.preventDefault() //prevent browser default behaviour which is reloading
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)}) //sends the form data to the Google Apps Script Web App; Sends a request to the URL specified;This creates a new FormData object from the form. FormData collects all the input fields in the form and their corresponding values (such as name, email, message) and sends them in the request body.
         .then(response => {
             msg.innerHTML="Message sent successfully!"
             setTimeout(function(){

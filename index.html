@@ -2,28 +2,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8"> <!-- sets the character encoding to UTF-8-->
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge"> <!-- Ensures the page is displayed in the highest mode available in Internet Explorer-->
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- Makes the webpage responsive on mobile devices by controlling the viewport's size.-->
     <title>
         Personal Portfolio Website
     </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5aa0fe55c8.js" crossorigin="anonymous"></script>
-    <!--this is fontawesome.com so we can use some icons under the services section-->
+    <!--this is fontawesome.com so I can use some icons under the services section-->
 </head>
 <body>
 <div id = "header">  <!--HEADER section-->
     <div class="container">
-        <nav> <!-- its the headers buttons -->
-            <img src = "images/logo1.jpeg" class="logo">
-            <ul id="sidemenu">
+        <nav> <!-- its the headers buttons, includes navigation bar -->
+            <img src = "images/logo1.jpeg" class="logo"> <!-- RYAN logo-->
+            <ul id="sidemenu"> 
                 <li><a href="#header">Home</a></li>  <!-- ul paired with li is an unordered lists-->
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Extracuriculum</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+                <i class="fas fa-times" onclick="closemenu()"></i> <!--A close button for the mobile menu, using a Font Awesome "times" icon, which calls a JavaScript function closemenu() -->
             </ul>
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>  
@@ -44,7 +44,7 @@
             <div class="about-col-2">  <!--header text for about me-->
                 <h1 class="sub-title">About Me</h1>
                 <p> I am an international student from Malaysia pursueing a degree in Computer Science and Engineering Technology over
-                    at the University of Toledo. I am trying to find a full-time position as a software engineer as I am eager to apply
+                    at the University of Toledo. I am trying to find a full-time position as a software engineer or IT professional as I am eager to apply
                     my diverse skill set, ranging from analytical problem-solving to effective communication in order to contribute
                     in the company's success. I am enthusiastic about embracing new challenges and actively seeking opportunities for 
                     growth, aiming to learn continuously and enhance my skills for long-term professional development.
@@ -59,10 +59,9 @@
                 <div class="tab-contents active-tab" id="skills"> <!--skills tab under about me-->
                     <ul>
                         <li><span>Programming languages</span><br>Java, Python, C#, in-line Assembly Language,
-                        HTML, CSS, JavaScript</li>
+                        HTML, CSS, JavaScript, IT</li>
                         <li><span>PLCs</span><br>Allen Bradley, Siemens</li>
                         <li><span>others</span><br>React, Node.js</li>
-                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience"> <!--experience tab under about me-->
@@ -72,14 +71,12 @@
                         proteins in the body in relation to liver cancer</li>
                         <li><span>True Burger Student Manager</span><br>Managed and coordinated staff workloads while overseeing 
                         all aspects of the store</li>
-                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
                     </ul>
                 </div>
                 <div class="tab-contents" id="education"> <!--education tab under about me-->
                     <ul>
                         <li><span>Fall 2020 - Fall 2021</span><br>Methodist College of Kuala Lumpur (CGPA - 3.34)</li>
                         <li><span>Spring 2022 - Present</span><br>The University of Toledo (CGPA - 3.96)</li>
-                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
                     </ul>
                 </div>
                 <div class="tab-contents" id="certifications"> <!--certifications tab under about me-->
@@ -99,7 +96,6 @@
                             <br>- Introduction to Agile Development and Scrum
                             <br>- Introduction to Test and Behavior Driven Development
                             <br>- Application Security for Developers and DevOps Professionals</li>
-                        <!--<li><span>UI/UX</span><br>Designing Web/App interface</li>-->
 
                         <li><span>.NET FullStack Developer Specialization</span><br>includes
                             <br>- .NET Full Stack Foundation
@@ -130,7 +126,7 @@
         <div class="services-list">
             <div>
                 <i class="fa-solid fa-bullseye"></i> <!--icon to display from fontawesome.com-->
-                <h2>Archery</h2> <!--first project-->
+                <h2>Archery</h2> 
                 <p>Competed professionally in the sport of archery in Malaysia. Highest achievement obtained was state champion.</p>
                 <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
             </div>
@@ -141,12 +137,6 @@
                     awareness and attract members via social media and promotional materials.</p>
                 <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
             </div>
-            <!--<div>-->
-                <!--<i class="fa-brands fa-app-store"></i>-->
-                <!--<h2>Web design3</h2>--> <!--third project-->
-                <!--<p>very cool third project! might be some kind of game or smtg yesyesyes</p>-->
-                <!--<a href="#">Learn more</a>--> <!--this can be a link to the website of what i am doing and whatnot-->
-            <!--</div>-->
         </div>
     </div>
 </div>
